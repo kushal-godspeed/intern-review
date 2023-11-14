@@ -1,0 +1,29 @@
+id: helloworld
+tasks:
+  - id: fist_task
+    fn: datasource.api.get./
+    on_error:
+      continue: false
+      log_attributes:  
+            error_message: <% outputs.transform_error.message %> 
+            error_type: 'Cannot Fatech Data Please Review it Again'
+      response: 
+        success: false
+        code: 500
+        data: "Error please check aagain"
+  
+  - id: trial_second
+    fn: com.gs.transform
+    args: |
+      <js%
+          let trial= outputs.fist_task.data.temprature
+          let fara =(parseInt(trial * 9/5) + 32) 
+          return fara
+           %>
+        
+  - id: second
+    fn: datasource.mongo.createOne
+    args:
+      location: <% outputs.first_task.name %>
+      temprature: <% outputs.trial_second.data %>
+      

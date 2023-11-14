@@ -1,0 +1,9 @@
+http.get./alpha:
+  fn: stock_market_function
+  authn: false
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object

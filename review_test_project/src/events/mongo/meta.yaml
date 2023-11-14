@@ -1,0 +1,88 @@
+# ONE
+http.get./mongo/meta/{id}:
+  summary: Fetch Meta
+  description: Fetch Meta from database
+  fn: com.biz.mongo.meta.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# CREATE
+http.post./mongo/meta:
+  summary: Create a new Meta
+  description: Create Meta from database
+  fn: com.biz.mongo.meta.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Meta'
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# UPDATE
+http.put./mongo/meta/{id}:
+  summary: Update a Meta
+  description: Update Meta from database
+  fn: com.biz.mongo.meta.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Meta'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# DELETE
+http.delete./mongo/meta/{id}:
+  summary: Delete a Meta
+  description: Delete Meta from database
+  fn: com.biz.mongo.meta.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# SEARCH
+http.post./mongo/meta/search:
+  summary: Fetch multiple Meta
+  description: Fetch multiple Meta from database
+  fn: com.biz.mongo.meta.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array
+

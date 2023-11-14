@@ -1,0 +1,7 @@
+summary: Fetch Meta
+tasks:
+  - id: mongo_meta_one
+    fn: datasource.mongo.Meta.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>

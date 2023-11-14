@@ -1,0 +1,9 @@
+http.post./third-party/get-data:
+  authn: true
+  fn: get_data
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object

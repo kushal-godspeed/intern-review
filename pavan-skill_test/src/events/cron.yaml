@@ -1,0 +1,2 @@
+cron.* * * * *./Asian.kolkota:
+  fn: cron

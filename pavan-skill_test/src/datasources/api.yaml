@@ -1,0 +1,4 @@
+type: axios
+base_url: https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=U8desDZ1kRvgnkt9sNghujGEBQYCYdV0
+headers:
+  Authorization: <js% `Bearer ${config.jwt_token}` %>

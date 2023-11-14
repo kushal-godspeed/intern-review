@@ -1,0 +1,11 @@
+"http.get./helloworld":
+  authn: false
+  fn: helloworld
+  body:
+    type: object
+    properties:
+      name:
+        type: string
+  responses:
+    200:
+      application/json:

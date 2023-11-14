@@ -1,0 +1,10 @@
+# event for consume data from Topic
+Kafka.publish-producer1.kafka_proj:
+  id: kafka__consumer
+  fn: kafka_consume
+  body:
+    description: The body of the query
+    content:
+      application/json: 
+        schema:
+          type: string

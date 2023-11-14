@@ -1,0 +1,14 @@
+http.get./destination:
+  fn: destination_info
+  summary: Fetch Post
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

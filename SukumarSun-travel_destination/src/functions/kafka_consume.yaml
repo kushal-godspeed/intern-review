@@ -1,0 +1,7 @@
+# function for consume data
+id: kafka-consumer
+summary: consumer
+tasks:
+  - id: set_consumer
+    fn: com.gs.return
+    args: <% inputs %>

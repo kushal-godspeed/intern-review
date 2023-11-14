@@ -1,0 +1,6 @@
+summary: get data from alpha api
+description: retrivinng data from the third party url
+tasks:
+  - id: alpha_data
+    fn: datasource.api.get./
+

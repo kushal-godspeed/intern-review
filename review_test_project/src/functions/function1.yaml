@@ -1,0 +1,8 @@
+id: kafka-publish
+summary: kafka publish message
+tasks:
+  - id: publish
+    fn: datasource.kafka.producer
+    args:
+      topic: "publish-producer1"
+      message: "laddu kavala nayana"

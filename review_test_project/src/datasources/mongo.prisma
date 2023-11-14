@@ -1,0 +1,27 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_TEST_URL") //Connection string can be found in the .env folder. you can add your own database connection string
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Meta {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  information String?
+  symbol     String?   
+  refreshed  DateTime @default(now())
+  
+}
+
+model Time {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  open      Float
+  high      Float
+  low       Float
+  volume    Float
+}
+
+
+//Schema for mongo-as-prisma example

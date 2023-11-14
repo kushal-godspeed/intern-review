@@ -1,0 +1,66 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+// created models based on the third-party api response.
+
+model BusinessDay {
+  id            String     @id @map("_id") @default(auto()) @db.ObjectId 
+  abstract      String?
+  webUrl        String?
+  snippet       String?
+  leadParagraph String?
+  source        String?
+  headline      String?
+  keywords      Json?
+  pubDate       DateTime?
+  documentType  String?
+  byline        String?
+  typeOfMaterial String?
+  wordCount     Int?
+  uri           String?
+}
+
+// model Opinion {
+//   id            String     @id @map("_id") @default(auto()) @db.ObjectId 
+//   webUrl        String?
+//   snippet       String?
+//   leadParagraph String?
+//   printSection  String?
+//   printPage     String?
+//   source        String?
+//   headline      String?
+//   keywords      Json?
+//   pubDate       DateTime?
+//   documentType  String?
+//   newsDesk      String?
+//   byline        String?
+//   typeOfMaterial String?
+//   wordCount     Int?
+//   uri           String?
+// }
+
+// model US {
+//   id            String     @id @map("_id") @default(auto()) @db.ObjectId 
+//   abstract      String?
+//   webUrl        String?
+//   snippet       String?
+//   leadParagraph String?
+//   printSection  String?
+//   printPage     String?
+//   source        String?
+//   headline      String?
+//   keywords      Json?
+//   pubDate       DateTime?
+//   documentType  String?
+//   newsDesk      String?
+//   subsectionName String?
+//   byline        String?
+//   typeOfMaterial String?
+//   wordCount     Int?
+//   uri           String?
+// }

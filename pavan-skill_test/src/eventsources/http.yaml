@@ -1,0 +1,6 @@
+type: express
+port: 3000
+jwt:
+  issuer: pavan_iss #iss
+  audience: pavan_aud #aud
+  secretOrKey: pavan

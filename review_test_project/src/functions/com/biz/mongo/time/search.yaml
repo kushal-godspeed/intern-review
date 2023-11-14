@@ -1,0 +1,5 @@
+summary: Fetch many Time
+tasks:
+  - id: mongo_time_search
+    fn: datasource.mongo.Time.findMany
+    args: {}

@@ -1,0 +1,7 @@
+summary: Delete Time
+tasks:
+  - id: mongo_time_delete
+    fn: datasource.mongo.Time.delete
+    args:
+      where:
+        id: <% inputs.params.id %>

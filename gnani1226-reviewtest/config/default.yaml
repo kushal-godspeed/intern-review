@@ -1,0 +1,4 @@
+jwt:
+  issuer: gnani #iss
+  audience: konda #aud
+  secretOrKey: godspeed

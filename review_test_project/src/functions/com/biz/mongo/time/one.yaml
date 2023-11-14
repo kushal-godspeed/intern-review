@@ -1,0 +1,10 @@
+summary: Fetch Time
+tasks:
+  - id: mongo_time_one
+    fn: datasource.mongo.Time.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>
+  - id: cal_the_open
+    fn: com.gs.return
+    args: <% outputs.mongo_time_one.data.id %>

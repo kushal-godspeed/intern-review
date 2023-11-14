@@ -1,0 +1,28 @@
+summary: currency converter
+id: step1
+on_error:
+  continue: false
+  log_attributes:  
+        error_message: <% outputs.transform_error.message %> 
+        error_type: 'your custom error type'
+  response: 
+    success: false
+    code: 500
+    data: "currency type error"
+tasks:
+  - id: first_task
+    fn: datasource.api.get./
+
+
+  - id: just_return
+    fn: datasource.mongo.createOne
+    args: 
+      base_code: <% outputs.first_task.data.base_code %>
+      conversion_rates: <% outputs.first_task.data.conversion_rates %>
+
+
+  # - id: second_task
+  #   fn: datasource.mongo.createOne
+  #   args:
+  #     fact: <%outputs.first_task.data.fact%>
+  #     length: <%outputs.first_task.data.length%>

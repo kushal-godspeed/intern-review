@@ -1,0 +1,8 @@
+summary: mongo wf
+description: mongo wf desc
+tasks:
+  - id: step1
+    fn: datasource.mongo.createOne
+    args:
+      id: '2'
+      name: 'rohit'

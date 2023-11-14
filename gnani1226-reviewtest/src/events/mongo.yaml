@@ -1,0 +1,8 @@
+http.post./mongo/createOne:
+  summary: create one user
+  description: create one user desc
+  fn: mongo
+  body:
+    type: object
+
+  

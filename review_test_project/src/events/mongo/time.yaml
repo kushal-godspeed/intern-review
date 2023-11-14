@@ -1,0 +1,88 @@
+# ONE
+http.get./mongo/time/{id}:
+  summary: Fetch Time
+  description: Fetch Time from database
+  fn: com.biz.mongo.time.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# CREATE
+http.post./mongo/time:
+  summary: Create a new Time
+  description: Create Time from database
+  fn: com.biz.mongo.time.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Time'
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# UPDATE
+http.put./mongo/time/{id}:
+  summary: Update a Time
+  description: Update Time from database
+  fn: com.biz.mongo.time.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Time'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# DELETE
+http.delete./mongo/time/{id}:
+  summary: Delete a Time
+  description: Delete Time from database
+  fn: com.biz.mongo.time.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# SEARCH
+http.post./mongo/time/search:
+  summary: Fetch multiple Time
+  description: Fetch multiple Time from database
+  fn: com.biz.mongo.time.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array
+

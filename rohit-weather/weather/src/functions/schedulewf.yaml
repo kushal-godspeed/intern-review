@@ -1,0 +1,7 @@
+summary: this workflow will be running every minute
+tasks:
+  - id: print
+    description: print for every minute
+    fn: com.gs.return
+    args:
+      data: HELLO from CRON

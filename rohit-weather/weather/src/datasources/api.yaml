@@ -1,0 +1,2 @@
+type: axios
+base_url: http://api.weatherstack.com/current?access_key=b5316f1d5d3494d9e778c62afbbd5a78&query=New%20York

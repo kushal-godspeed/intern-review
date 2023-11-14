@@ -1,0 +1,3 @@
+type: axios
+# base_url: https://httpbin.org
+base_url: https://v6.exchangerate-api.com/v6/e9654edeb0bd3b7064ac1fbc/latest/USD

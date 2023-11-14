@@ -1,0 +1,2 @@
+cron.0 * * * *.Asia/Kolkata:
+  fn: schedulewf

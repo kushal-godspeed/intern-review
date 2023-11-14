@@ -1,0 +1,8 @@
+summary: Create Time
+tasks:
+  - id: alpha_data
+    fn: datasource.api.get./
+
+  - id: mongo_time_create
+    fn: datasource.mongo.Time.create
+    args: <% outputs.alpha_data %>

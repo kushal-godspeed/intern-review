@@ -1,0 +1,23 @@
+summary:
+on_error:
+  continue: false
+  log_attributes:
+    error_message: <%outputs.transform_error.message%>
+    error_type: "Internal server error"
+  response:
+    code: 500
+    success: false 
+    data: "Check the workflow logic"
+tasks:
+  - id: data_from_third_party
+    fn: datasource.api.get
+    
+  - id: filtering_sensitive_data
+    fn: filter
+    args: <%outputs.data_from_third_party.data%>
+  
+  - id: publishing_to_kafka
+    fn: datasource.kafka.producer
+    args:
+      topic: "kafka_producer1"
+      message: <%outputs.filtering_sensitive_data.data%>

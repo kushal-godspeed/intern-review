@@ -1,0 +1,8 @@
+"http.get./currency":
+  fn: axioswf
+  body:
+    type: object
+
+  responses:
+    200:
+      application/json:

@@ -1,0 +1,5 @@
+summary: sample
+description: sample
+tasks:
+  - id: cron_example
+    fn: datasource.api.get./

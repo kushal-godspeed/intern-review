@@ -1,0 +1,7 @@
+summary: Delete Meta
+tasks:
+  - id: mongo_meta_delete
+    fn: datasource.mongo.Meta.delete
+    args:
+      where:
+        id: <% inputs.params.id %>

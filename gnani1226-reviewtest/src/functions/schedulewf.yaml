@@ -1,0 +1,5 @@
+summary: this workflow will be running every minute
+tasks:
+  - id: print
+    description: print for every minute
+    fn: axioswf

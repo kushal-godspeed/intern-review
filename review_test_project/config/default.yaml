@@ -1,0 +1,4 @@
+log_level: debug
+caching: redis
+url: https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=demo
+jwt_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3N1ZXIiOiJzaXJpIiwiYXVkaWVuY2UiOiJzaXJpIn0.u91LM7smyRVQqu9YHbvvbtEo-XtRIOR-cgie_jst490

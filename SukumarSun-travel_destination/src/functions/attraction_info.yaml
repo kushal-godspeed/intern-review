@@ -1,0 +1,9 @@
+id: attraction_info
+tasks:
+  - id: first_task
+    fn: datasource.api.get./attraction/654dbfa56841225b2775ffb6
+    
+  - id: mongo_task
+    fn: datasource.mongo.insertOne
+    args: 
+      data: <%outputs.first_task.data%>

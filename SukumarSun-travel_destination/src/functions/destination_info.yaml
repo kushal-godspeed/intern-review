@@ -1,0 +1,9 @@
+id: destination_info
+tasks:
+  - id: first_task
+    fn: datasource.api.get./destination/654dbdf36841225b2775ffa7
+    
+  - id: mongo_task
+    fn: datasource.mongo.insertOne
+    args: 
+      data: <%outputs.first_task.data%>

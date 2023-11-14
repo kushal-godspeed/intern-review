@@ -1,0 +1,5 @@
+summary: Fetch many Meta
+tasks:
+  - id: mongo_meta_search
+    fn: datasource.mongo.Meta.findMany
+    args: {}

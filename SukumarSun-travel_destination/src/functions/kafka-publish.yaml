@@ -1,0 +1,10 @@
+id: kafka-publish
+summary: kafka publish message
+tasks:
+  - id: publish
+    fn: datasource.kafka.producer
+    args:
+      topic: "publish-producer1"
+      message: "Hi this is a good destination"
+      
+#      message:<% inputs.body.message%>

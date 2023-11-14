@@ -1,0 +1,9 @@
+type: express
+port: 3004
+docs: 
+  endpoint: /api-docs
+
+jwt:
+  issuer: "sundar"
+  audience: "sundar"
+  secretOrKey: "sundar"

@@ -1,0 +1,4 @@
+tasks: 
+  - id: cron 
+    fn: datasource.mongo.BusinessDay.findMany
+    args: {} 

@@ -1,0 +1,4 @@
+# event for Shedule a task for evrey minute.
+cron.*/10* * * * *.Asia/Kolkata: #event key
+  fn: com.biz.mongo.time.create
+

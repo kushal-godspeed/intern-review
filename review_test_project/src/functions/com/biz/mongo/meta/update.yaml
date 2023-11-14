@@ -1,0 +1,8 @@
+summary: Update Meta
+tasks:
+  - id: mongo_meta_update
+    fn: datasource.mongo.Meta.update
+    args:
+      where:
+        id: <% inputs.params.id %>
+      data: <% inputs.body %>

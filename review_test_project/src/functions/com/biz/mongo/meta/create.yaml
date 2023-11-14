@@ -1,0 +1,6 @@
+summary: Create Meta
+tasks:
+  - id: mongo_meta_create
+    fn: datasource.mongo.Meta.create
+    args:
+      data: <% inputs.body %>

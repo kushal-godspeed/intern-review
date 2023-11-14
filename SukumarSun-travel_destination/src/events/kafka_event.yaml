@@ -1,0 +1,22 @@
+# event for Publish
+'http.post./kafka-pub':
+  fn: kafka-publish
+  authn: true
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+          required: ['message']
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string

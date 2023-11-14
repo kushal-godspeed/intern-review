@@ -1,0 +1,9 @@
+type: express
+port: 3009
+docs:
+  endpoint: /api-docs
+
+jwt:
+  issuer: 'siri'
+  audience: 'siri'
+  secretOrKey: 'siri'
